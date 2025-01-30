@@ -14,18 +14,20 @@
             padding: 0;
         }
         .container {
-            background-color: rgba(223, 204, 254, 0.616);
+            background-color:  rgba(135, 207, 235, 0.548);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(72, 190, 3, 0.256);
-            max-width: 900px;
+            /* box-shadow: 0 0 10px rgba(72, 190, 3, 0.256); */
+            width: auto;
+            height: auto;
             margin: 50px auto;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: whitesmoke;
         }
         .form-group {
+            color: whitesmoke;
             margin-bottom: 15px;
         }
         .form-group label {
@@ -71,15 +73,11 @@
             }
         }
         .question {
-            background-color: rgb(235, 134, 235);
             padding: 15px;
             border-radius: 4px;
             margin-bottom: 10px;
         }
-        .question h3 {
-            margin-top: 0;
-            text-align: center;    
-        }
+    
         .question .form-group {
             margin-bottom: 10px;
         }
@@ -88,8 +86,10 @@
             margin-right: 10px;
         }
         #questionsSection {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: whitesmoke;
             width: 100%;
-            background-color: rgb(235, 134, 235);
+            background-color: rgba(128, 0, 128, 0.265);
             padding: 10px;
             border-radius: 20px;
         }
@@ -97,23 +97,26 @@
             text-align: center;
         }
         .submit-btn {
-            background-color: #007bff;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        #submit-btn2 {
             margin: 0 auto;
             display: block;
-            background-color: #007bff;
-            color: white;
+            background-color: purple;
             border: none;
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
         }
+    .btn-primary-mt-3 {
+        margin: 20px;
+        background-color:  #c63fc6;
+        color: white;
+        text-align: center; 
+    }
+    .btn-success-mt-3 {
+        background-color:  #c994c9;
+        color: white;
+        text-align: center; 
+    }
     </style>
 </head>
 <body>
@@ -151,8 +154,8 @@
                 <h3>Questions</h3>
                 <!-- Questions will be added here dynamically -->
             </div>
-            <button type="button" class="btn btn-primary mt-3" onclick="addQuestion()">Add Question</button>
-            <button type="submit" class="btn btn-success mt-3">Save Quiz</button>
+            <button type="button" class="btn btn-primary-mt-3" onclick="addQuestion()">Add Question</button>
+            <button type="submit" class="btn btn-success-mt-3">Save Quiz</button>
             <br><br>
             <a href="http://">
                 <button id="submit-btn2" class="submit-btn">Submit Quiz</button>
