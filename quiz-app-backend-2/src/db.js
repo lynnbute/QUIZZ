@@ -10,11 +10,14 @@ const client = new Client({
   connectionString: process.env.DATABASE_URL,
 });
 
-const connect = () => {
-  client.connect()
-    .then(() => console.log('Connected to the PostgreSQL database'))
-    .catch((err) => console.error('Error connecting to the database', err.stack));
+// Connect to the database
+const connect = async () => {
+  try {
+    await client.connect();
+    console.log('Connected to the PostgreSQL database');
+  } catch (err) {
+    console.error('Error connecting to the database', err.stack);
+  }
 };
 
-// Export the connect function
-export { connect };
+export { connect, client };
